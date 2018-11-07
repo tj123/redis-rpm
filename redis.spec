@@ -190,6 +190,7 @@ fi
 %files
 %defattr(-, root, root, 0755)
 # %doc doc/*.html
+%doc 00-RELEASENOTES  BUGS  CONTRIBUTING  COPYING README.md
 %{_sbindir}/redis-server
 %{_bindir}/redis-benchmark
 %{_bindir}/redis-cli
