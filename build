@@ -11,6 +11,10 @@
 #fi
 
 DIST=$(dirname $(readlink -f $0))/dist
+if [ "$1" = "clean" ]; then
+  rm -rf $DIST
+  exit 0
+fi
 #SPEC=$(readlink -f $1)
 SPEC=redis.spec
 VERSION=$(grep "^Version\:" $SPEC|awk '{print $2}')
